@@ -1,0 +1,11 @@
+/* CSS file dedicated to DKD Plugin */
+
+/* Styling for Return to Top Button */
+
+a.rtt_button {
+  text-transform: lowercase;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+}
