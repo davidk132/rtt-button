@@ -59,13 +59,13 @@ function dkd_plugin_rtt() {
     <input type="checkbox" id="rtt_on" name="rtt_toggle_on" <?php echo ( $current_button_status ? "checked" : "" ); ?> /><br/>
     <label for="button_text">Button text (max 20 chars): </label>
     <input type="text" id="button_text" name="rtt_button_text" value="<?php echo( esc_attr( $current_button_text ) ); ?>" /><br/>
-    <!-- next, add the select for page location of button -->
+    <!-- next, add the select for page location of button. Uncomment this page button really needed.
     <label for="location">Choose where button will appear on the screen (Current location is <?php echo( $current_location_selection ); ?>): </label>
     <select id="location" name="rtt_button_location">
       <?php foreach ( $location_selection as $location ) {
     echo( '<option value="' . $location . '">' . $location . '</option>' );
   } ?>
-    </select><br/>
+    </select><br/> -->
     <?php submit_button(); ?>
   </form>
 <?php
