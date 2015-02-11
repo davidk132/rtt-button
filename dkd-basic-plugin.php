@@ -15,6 +15,8 @@ define( 'DKD_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 /* Register and enqueue dedicated CSS */
 function dkd_set_up_assets() {
+  wp_register_style( 'font-awesome', ( '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') );
+  wp_enqueue_style( 'font-awesome' );
   wp_register_style( 'dkd-plugin-css', plugins_url( 'assets/css/dkd-plugin.css', __FILE__ ) );
   wp_enqueue_style( 'dkd-plugin-css' );
 }
