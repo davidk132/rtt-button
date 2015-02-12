@@ -7,8 +7,13 @@ if( ! get_option( 'rtt_toggle_on') ) {
 /* add anchor to the top of the page, if RTT is enabled on both the admin and post pages */
 function dkd_add_anchor( $content ) {
   global $post;
+  
+  /* Exit if not a post, page, or attachment */
+  if ( ! is_singular() ) {
+    return $content;
+  }
+  
   if( ! is_admin() ) {
-    echo( 'RTT value on post is ' . get_post_meta( $post->ID, 'return_to_top', true) );
     if ( get_post_meta( $post->ID, 'return_to_top', true) == 'off' ) {
       return $content;
     } else {
